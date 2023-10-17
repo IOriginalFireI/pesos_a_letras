@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+
+<link rel="stylesheet" href="{% static 'Styles/style.css' %}">
+
+<div class="formi">
+ <form action="" method="POST" >
+    {% csrf_token %}
+    {{form.as_p}}
+ <div class="button">  
+    <button type="submit" class="btn">Convertir</button>
+ </div> 
+</div> 
+</form>  
+
+<div class="resultb">
+{% if numv1 %}    
+ <h3 class="result">{{numv1}} con {{numv1c}} centavos</h3>
+{% endif %} 
+
+{% if numv2 %} 
+ <h3 class="result">{{numv2}} con {{numv2c}} centavos</h3>
+{% endif %} 
+
+{% if numv3 %} 
+ <h3 class="result">{{numv3}} con {{numv3c}} centavos</h3>
+{% endif %}
+
+{% if numv3 %} 
+ <h3 class="result">{{numv4}} con {{numv4c}} centavos</h3>
+{% endif %}
+
+{% if numv3 %} 
+ <h3 class="result">{{numv5}} con {{numv5c}} centavos</h3>
+{% endif %}
+</div> 
+   
+ 
+{%endblock%}

@@ -1,0 +1,37 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'Styles/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Num2Words</title>
+</head>
+<body>
+<div class="general">
+    <div class="titlecont">
+     <h1 class="titleele">Num2Words Online</h1>
+    </div>   
+ <div class="container">
+    <div class="numcont">
+     <div class="contitle"> 
+      <h2>Convertidor de números a letras</h2>
+    </div>
+<div class="formi">
+  <form action="convertido/" method="POST" >
+  {% csrf_token %}
+  {{form.as_p}}
+ <div class="button">  
+  <button type="submit" class="btn">Convertir</button>
+</div>
+  
+ </div>   
+</div>
+ </div>
+</div> 
+</body>
+</html>

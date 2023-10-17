@@ -1,0 +1,132 @@
+body{
+    background-color:whitesmoke;
+    margin: 0;
+    overflow: hidden;
+}
+
+.titlecont{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0%;
+    margin: 0%;
+    width: 102%;
+}
+
+.titleele{
+    text-align: center;
+    background-color: whitesmoke;
+    color: rgba(53, 19, 19, 0.486);
+    padding: 0px 30px;
+    border-style:outset;
+    border-color: rgba(53, 19, 19, 0.486)
+   
+}
+
+.container{
+    margin-top: 3%;
+    width: 60%;
+    height: 700px;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: rgb(175, 119, 81);
+}
+
+.general{
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.num{
+    width: 20%;
+    height: 30px;
+    font-size: larger;
+    margin: 3px 0px;
+    -webkit-border-radius: 15px 1px;
+    border-radius: 15px 1px;
+    border: 1px solid;
+    transition: box-shadow 0.2s;
+}
+
+.num:hover{
+    box-shadow:0px 0px 2px rgb(14, 13, 13);
+}
+
+.numcont{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contitle{
+    background-color: bisque;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.forms{
+    transition: box-shadow 0.1s;
+    border: #000000 1px solid;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:bisque;
+    border-radius: 5px;
+}
+
+.forms:hover{
+ 
+    box-shadow: 1px 1px 3px 0px #000000;
+
+}
+
+.button{
+ text-align: center;
+  
+}
+
+.btn {
+ border: none; 
+ color: black; 
+ padding: 14px 28px; 
+ cursor:pointer; 
+ border-radius: 5px;
+ background-color: rgb(175, 119, 81);
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.btn:hover{
+    background-color:lightcoral;
+}
+
+.result{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    padding-left: 1%;
+    border: solid 2px whitesmoke;
+    border-style:outset;
+    border-radius: 10px;
+    background-color: bisque;
+    padding: 5px;
+    padding-left: 1%;
+}
+.resultb{
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    
+}
+
+.formi{
+    border: 3px rgb(175, 119, 81) solid;
+    padding: 8px;
+    border-radius: 10px;
+}
