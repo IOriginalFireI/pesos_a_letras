@@ -21,6 +21,6 @@ from converter import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ("", views.index),
-    path("convertido/", views.convertidof)
+    path("convertido/", views.convertidof,)
     
 ]
