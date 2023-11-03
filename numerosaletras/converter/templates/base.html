@@ -9,24 +9,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Num2Words</title>
+    <title>Pesos a letras</title>
+    <link rel="icon" href="{% static 'Styles/conversion.png' %}" sizes="32x32"  type="image/png">
 </head>
 <body>
 <div class="general">
     <div class="titlecont">
-     <h1 class="titleele">Num2Words Online</h1>
+     <h1 class="titleele">Pesos a letras</h1>
     </div> 
-
+<img src="{% static 'Styles/conversion(1).png' %}" height="50px" width="50px" style="margin-bottom: 18px;" >
  
     
  <div class="container">
     <div class="numcont">
         <div class="contitle"> 
-         <h2>Convertidor de números a letras</h2>
+         <h2>Convertidor de pesos a letras</h2>
        </div>
     {%block content%}   
     {%endblock%}  
  </div>
 </div> 
 </body>
+<footer class="ftr">
+    <p>&copy; 2023 Edgar López</p> 
+    <p>Proyecto realizado con base en la libreria <a href="https://pypi.org/project/num2words/" target="_blank">num2words</a></p>
+    
+</footer>
 </html>

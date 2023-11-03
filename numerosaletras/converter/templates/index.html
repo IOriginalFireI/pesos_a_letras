@@ -5,33 +5,63 @@
 <html lang="en">
 
 <head>
+   
     <link rel="stylesheet" href="{% static 'Styles/style.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación web que sirve para convertir cantidad en pesos a letras escritas.">
+    <meta name="keywords" content="numeros, letras, convertir, pesos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Num2Words</title>
+    
+    <title>Pesos a letras</title>
+    <link rel="icon" href="{% static 'Styles/conversion.png' %}" sizes="32x32"  type="image/png">
 </head>
 <body>
 <div class="general">
     <div class="titlecont">
-     <h1 class="titleele">Num2Words Online</h1>
-    </div>   
+     <h1 class="titleele">Pesos a letras</h1>
+    </div>
+    
+<img src="{% static 'Styles/conversion(1).png' %}" height="50px" width="50px" style="margin-bottom: 18px;" >
  <div class="container">
     <div class="numcont">
      <div class="contitle"> 
-      <h2>Convertidor de números a letras</h2>
+      <h2>Convertidor de pesos a letras</h2>
     </div>
-<div class="formi">
-  <form action="convertido/" method="POST" >
+<div class="inst"> 
+   <p> Esta aplicación web es capaz de convertir pesos en cantidad númerica a letras, es decir, pesos escritos en letras.
+       Es necesario que utilices un formato en el que a pesar de no tener centavos el final de esa cantidad sea ".00". Además
+       no es obligatorio que se introduzca la cantidad "limpia", es decir, solo números, sino que puedes introducir la cantidad
+       con los símbolos comunes como el símbolo de pesos y las comas que separan los miles.
+   </p>
+   
+  
+  <div class="formi">
+   <form action="convertido/" method="POST" >
   {% csrf_token %}
   {{form.as_p}}
- <div class="button">  
-  <button type="submit" class="btn">Convertir</button>
-</div>
-  
- </div>   
+  <div class="button">  
+   <button type="submit" class="btn">Convertir</button>
+  </div>
+ 
+
+   
+  </div>
+  <p>
+    Este convertidor de pesos a letras surgió de una idea para ayudar a ciertos procesos específicos en los que es necesario colocar una cantidad de dinero en pesos
+    y también escrita. De esta forma se pueden introducir varios números para convertir y al final simplemente copiarlos y pegarlos donde sea necesario.
+  </p>  
+</div>       
 </div>
  </div>
-</div> 
+</div>
 </body>
+
+ <footer class="ftr">
+  <p>&copy; 2023 Edgar López</p> 
+  <p>Proyecto realizado con base en la libreria <a href="https://pypi.org/project/num2words/" target="_blank">num2words</a></p>
+  
+ </footer>
+
 </html>

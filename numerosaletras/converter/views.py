@@ -46,6 +46,8 @@ def convertidof(request):
         #Cunando la cantidad termina con .01 dice "con uno centavos" (corregir)
         #Programar quitar las comas de los números que se van a ingresar
         
+        #Para que no se puedan usar letras utilizar isdigit que ayuda a comprobar que determinado elemento de una cadena sea un número
+        
         for palabra, valor in dicc.items():
             numv1 = numv1.replace(palabra, valor)
             numv2 = numv2.replace(palabra, valor)
@@ -55,6 +57,9 @@ def convertidof(request):
            
         
         if numv1:
+            
+             if numv1[:-3].isdigit() == False or numv1[-2:-1].isdigit() == False:
+              return HttpResponse("Ingresa números en formato correcto.")
              
              if len(numv1) < 3 or numv1[-3] != ".":
               return HttpResponse("Ingresa números en formato correcto.")
@@ -67,7 +72,10 @@ def convertidof(request):
              else:
                  numv11c = numv11c + " centavos"       
         if numv2:
-            
+             
+             if numv2[:-3].isdigit() == False or numv2[-2:-1].isdigit() == False:
+              return HttpResponse("Ingresa números en formato correcto.")
+             
              if len(numv2) < 3 or numv2[-3] != ".":
               return HttpResponse("Ingresa números formato correcto.")             
              numv22 = num2words(numv2[0:-3], lang="es_CO", to="currency" )
@@ -79,6 +87,8 @@ def convertidof(request):
              else:
                 numv22c = numv22c + " centavos"    
         if numv3:
+             if numv3[:-3].isdigit() == False or numv3[-2:-1].isdigit() == False:
+              return HttpResponse("Ingresa números en formato correcto.")
              if len(numv3) < 3 or numv3[-3] != ".":
               return HttpResponse("Ingresa números en formato correcto.")
              numv33 = num2words(numv3[0:-3], lang="es_CO", to="currency" )
@@ -90,6 +100,8 @@ def convertidof(request):
              else:
                 numv33c = numv33c + " centavos"
         if numv4:
+             if numv4[:-3].isdigit() == False or numv4[-2:-1].isdigit() == False:
+              return HttpResponse("Ingresa números en formato correcto.")
              if len(numv4) < 3 or numv4[-3] != ".":
               return HttpResponse("Ingresa números en formato correcto.")
              numv44 = num2words(numv4[0:-3], lang="es_CO", to="currency" )
@@ -101,6 +113,8 @@ def convertidof(request):
              else:
                  numv44c = numv44c + " centavos"   
         if numv5:
+             if numv5[:-3].isdigit() == False or numv5[-2:-1].isdigit() == False:
+              return HttpResponse("Ingresa números en formato correcto.")
              if len(numv5) < 3 or numv5[-3] != ".":
               return HttpResponse("Ingresa números en formato correcto.")
              numv55 = num2words(numv5[0:-3], lang="es_CO", to="currency" )

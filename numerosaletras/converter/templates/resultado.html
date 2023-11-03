@@ -5,15 +5,30 @@
 
 <link rel="stylesheet" href="{% static 'Styles/style.css' %}">
 
-<div class="formi">
- <form action="" method="POST" >
-    {% csrf_token %}
-    {{form.as_p}}
- <div class="button">  
-    <button type="submit" class="btn">Convertir</button>
- </div> 
-</div> 
-</form>  
+<div class="inst"> 
+   <p> Esta aplicación web es capaz de convertir pesos en cantidad númerica a letras, es decir, pesos escritos en letras.
+       Es necesario que utilices un formato en el que a pesar de no tener centavos el final de esa cantidad sea ".00". Además
+       no es obligatorio que se introduzca la cantidad "limpia", es decir, solo números, sino que puedes introducir la cantidad
+       con los símbolos comunes como el símbolo de pesos y las comas que separan los miles.
+   </p>
+   
+  
+  <div class="formi">
+   <form action="" method="POST" >
+  {% csrf_token %}
+  {{form.as_p}}
+  <div class="button">  
+   <button type="submit" class="btn">Convertir</button>
+  </div>
+ 
+
+   
+  </div>
+  <p>
+    Este convertidor de pesos a letras surgió de una idea para ayudar a ciertos procesos específicos en los que es necesario colocar una cantidad de dinero en pesos
+    y también escrita. De esta forma se pueden introducir varios números para convertir y al final simplemente copiarlos y pegarlos donde sea necesario.
+  </p>  
+</div>       
 
 <div class="resultb">
 {% if numv1 %}    
